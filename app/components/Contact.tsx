@@ -5,29 +5,46 @@ import { profile, socials } from "../data/portfolio";
 import { ArrowUpRightIcon, MailIcon, SocialIcon } from "./Icons";
 import SectionTitle from "./SectionTitle";
 
-export default function Contact() {
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+// Access key của Web3Forms — public được, không phải secret nhạy cảm.
+const WEB3FORMS_ACCESS_KEY = "363c0ff6-7b5a-470b-a363-9d38dd8768c4";
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+type Status = "idle" | "sending" | "sent" | "error";
+
+export default function Contact() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const message = String(data.get("message") || "");
+    const formData = new FormData(form);
 
-    const subject = encodeURIComponent(`[Portfolio] Liên hệ từ ${name}`);
-    const body = encodeURIComponent(
-      `Tên: ${name}\nEmail: ${email}\n\n${message}`,
-    );
-    setSending(true);
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
-      form.reset();
-    }, 600);
+    const name = String(formData.get("name") || "");
+    const subject = String(formData.get("subject") || "").trim();
+    formData.set("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.set("subject", subject || `[Portfolio] Liên hệ từ ${name}`);
+    formData.set("from_name", "Portfolio Shino");
+
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+        setErrorMsg(data.message || "Gửi không thành công, vui lòng thử lại.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg("Lỗi kết nối, vui lòng thử lại sau.");
+    }
   }
 
   return (
@@ -90,6 +107,15 @@ export default function Contact() {
             onSubmit={onSubmit}
             className="glass rounded-2xl p-6 sm:p-8 space-y-4"
           >
+            {/* Honeypot chống spam — người dùng thật không nhìn thấy ô này */}
+            <input
+              type="checkbox"
+              name="botcheck"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden
+            />
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Tên của bạn" name="name" placeholder="Nguyễn Văn A" required />
               <Field
@@ -123,14 +149,27 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              disabled={sending}
+              disabled={status === "sending"}
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-cyan px-6 py-3 font-medium text-background shadow-[0_8px_30px_-8px_rgba(56,189,248,0.6)] transition-all hover:shadow-[0_12px_40px_-8px_rgba(56,189,248,0.8)] hover:-translate-y-0.5 disabled:opacity-60"
             >
-              {sending ? "Đang gửi..." : sent ? "Đã gửi ✓" : "Gửi tin nhắn"}
-              {!sending && !sent && (
+              {status === "sending"
+                ? "Đang gửi..."
+                : status === "sent"
+                  ? "Đã gửi ✓"
+                  : "Gửi tin nhắn"}
+              {(status === "idle" || status === "error") && (
                 <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
               )}
             </button>
+
+            {status === "sent" && (
+              <p className="text-sm text-cyan">
+                Cảm ơn bạn! Tin nhắn đã được gửi, mình sẽ phản hồi sớm.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-400">{errorMsg}</p>
+            )}
           </form>
         </div>
       </div>
