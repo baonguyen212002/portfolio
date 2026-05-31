@@ -7,9 +7,9 @@ export default function Projects() {
     <section id="projects" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle
-          eyebrow="03 — Dự án"
-          title="Những sản phẩm mình đã xây dựng"
-          description="Chọn lọc một vài dự án tiêu biểu — từ các sản phẩm thương mại đến dự án thử nghiệm."
+          eyebrow="03 — Projects"
+          title="Things I've built"
+          description="A selection of projects — from commercial products to internal systems."
         />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -91,7 +91,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-6 py-3 font-medium text-foreground transition-all hover:border-accent/50 hover:bg-surface"
           >
-            Xem thêm trên GitHub
+            See more on GitHub
             <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
           </a>
         </div>

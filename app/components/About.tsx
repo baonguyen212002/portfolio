@@ -4,23 +4,23 @@ import SectionTitle from "./SectionTitle";
 const highlights = [
   {
     icon: "🚀",
-    title: "Performance đầu tiên",
-    text: "Tối ưu LCP, INP và Core Web Vitals từ ngay những dòng code đầu tiên.",
+    title: "Performance first",
+    text: "Optimizing queries, response times and resource usage from the very first commit.",
   },
   {
     icon: "🧩",
-    title: "Kiến trúc rõ ràng",
-    text: "Module hóa, tách concerns, dễ bảo trì và mở rộng cho team lớn.",
+    title: "Clean architecture",
+    text: "Modular code with clear separation of concerns — easy to maintain and scale across a team.",
   },
   {
     icon: "🎯",
-    title: "Định hướng business",
-    text: "Code phục vụ mục tiêu kinh doanh, không phải để phô trương kỹ thuật.",
+    title: "Business-driven",
+    text: "Code that serves business goals, not just technical showmanship.",
   },
   {
     icon: "📚",
-    title: "Học liên tục",
-    text: "Luôn cập nhật công nghệ mới và đánh giá khi nào nên áp dụng.",
+    title: "Always learning",
+    text: "Keeping up with new technologies and judging when they're worth adopting.",
   },
 ];
 
@@ -29,9 +29,9 @@ export default function About() {
     <section id="about" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle
-          eyebrow="01 — Về mình"
-          title="Một chút về bản thân"
-          description="Sản phẩm tốt cần được xây từ nền tảng kỹ thuật vững và sự đồng cảm với người dùng."
+          eyebrow="01 — About"
+          title="A little about me"
+          description="Good products are built on solid engineering and real empathy for the people using them."
         />
 
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
@@ -50,7 +50,7 @@ export default function About() {
                 href="#contact"
                 className="inline-flex items-center gap-2 text-accent transition-colors hover:text-highlight"
               >
-                Hợp tác cùng mình →
+                Let's work together →
               </a>
             </div>
           </div>

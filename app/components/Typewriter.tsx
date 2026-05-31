@@ -5,19 +5,19 @@ import { useEffect, useState } from "react";
 type TypewriterProps = {
   text: string;
   className?: string;
-  /** Class cho thanh con trỏ — vd kích thước "w-1 h-12 sm:h-14" */
+  /** Class for the caret bar — e.g. sizing "w-1 h-12 sm:h-14" */
   caretClassName?: string;
-  /** Tốc độ gõ mỗi ký tự (ms) */
+  /** Typing speed per character (ms) */
   speed?: number;
-  /** Tốc độ xoá mỗi ký tự (ms) */
+  /** Deleting speed per character (ms) */
   deleteSpeed?: number;
-  /** Trễ trước khi bắt đầu gõ (ms) */
+  /** Delay before typing starts (ms) */
   startDelay?: number;
-  /** Dừng lại bao lâu khi gõ xong trước khi xoá (ms) */
+  /** How long to pause when fully typed, before deleting (ms) */
   pauseAfter?: number;
-  /** Dừng lại bao lâu khi đã xoá hết trước khi gõ lại (ms) */
+  /** How long to pause when emptied, before typing again (ms) */
   pauseBefore?: number;
-  /** Lặp vô hạn: gõ → xoá → gõ lại */
+  /** Loop forever: type → delete → retype */
   loop?: boolean;
 };
 
@@ -37,7 +37,7 @@ export default function Typewriter({
 
   const full = count === text.length;
   const empty = count === 0;
-  const done = !loop && full; // gõ một lần xong thì dừng hẳn
+  const done = !loop && full; // type once, then stop for good
 
   useEffect(() => {
     if (done) return;
@@ -72,7 +72,7 @@ export default function Typewriter({
     pauseBefore,
   ]);
 
-  // Con trỏ nhấp nháy khi đang dừng (gõ xong/giữ), đứng yên khi đang gõ/xoá.
+  // Caret blinks while paused (fully typed/holding), stays solid while typing/deleting.
   const blink = full && !deleting;
 
   return (

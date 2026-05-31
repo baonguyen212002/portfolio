@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shino — Backend Developer",
   description:
-    "Portfolio của Shino — Backend Developer (cũng làm full-stack), chuyên PHP, Laravel, MySQL và triển khai trên Linux/Nginx.",
+    "Portfolio of Shino — a backend developer (also full-stack) specializing in PHP, Laravel, MySQL and deployment on Linux/Nginx.",
   keywords: [
     "Backend Developer",
     "PHP",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Shino — Backend Developer",
     description: "Backend Developer · PHP · Laravel · MySQL · Linux · Nginx",
     type: "website",
-    locale: "vi_VN",
+    locale: "en_US",
   },
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="vi"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>

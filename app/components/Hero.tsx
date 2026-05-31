@@ -31,12 +31,12 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
               </span>
-              Sẵn sàng nhận dự án mới
+              Open to new projects
             </div>
 
             <h1 className="mb-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
               <span className="block text-foreground-muted text-2xl sm:text-3xl mb-3 font-normal">
-                Xin chào, mình là
+                Hi, I'm
               </span>
               <Typewriter
                 text={profile.name}
@@ -73,7 +73,7 @@ export default function Hero() {
                 href="#projects"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-cyan px-6 py-3 font-medium text-background shadow-[0_8px_30px_-8px_rgba(56,189,248,0.6)] transition-all hover:shadow-[0_12px_40px_-8px_rgba(56,189,248,0.8)] hover:-translate-y-0.5"
               >
-                Xem dự án
+                View projects
                 <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
               </a>
               <a
@@ -81,7 +81,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-6 py-3 font-medium text-foreground transition-all hover:border-accent/50 hover:bg-surface"
               >
                 <DownloadIcon className="h-4 w-4" />
-                Liên hệ
+                Get in touch
               </a>
             </div>
 

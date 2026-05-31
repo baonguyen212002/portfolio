@@ -32,19 +32,19 @@ export const profile = {
   name: "Shino",
   role: "Backend Developer · Full-stack",
   tagline:
-    "Mình tập trung vào Backend — thiết kế API, tối ưu database và vận hành server. Khi dự án cần, mình cũng làm được phần frontend.",
-  location: "Hồ Chí Minh, Việt Nam",
+    "I focus on the backend — designing APIs, optimizing databases and running servers. When a project needs it, I handle the frontend too.",
+  location: "Ho Chi Minh City, Vietnam",
   email: "shino@glodival.com",
   available: true,
   bio: [
-    "Xin chào, mình là Shino — một Backend Developer, đồng thời làm được full-stack. Mình thích xây dựng những hệ thống chạy ổn định ở phía sau sản phẩm.",
-    "Thế mạnh của mình là backend với PHP & Laravel, làm việc cùng MySQL/MariaDB và triển khai trên môi trường Linux + Nginx. Phía frontend, mình dùng được Vue, Nuxt.js cùng HTML/CSS khi dự án cần.",
-    "Hiện mình đang làm tại Glodival (Hồ Chí Minh), tham gia phát triển các hệ thống nội bộ (ERP, CRM) và nền tảng thanh toán GloDiPay.",
+    "Hi, I'm Shino — a backend developer who also works full-stack. I enjoy building the systems that quietly keep a product running.",
+    "My strengths are backend work with PHP & Laravel, MySQL/MariaDB, and deploying on Linux + Nginx. On the frontend I'm comfortable with Vue, Nuxt.js and HTML/CSS whenever a project calls for it.",
+    "I'm currently at Glodival (Ho Chi Minh City), building internal systems (ERP, CRM) and the GloDiPay payment platform.",
   ],
   stats: [
-    { label: "Hiện làm tại", value: "Glodival" },
-    { label: "Vị trí chính", value: "Backend" },
-    { label: "Stack chủ lực", value: "Laravel" },
+    { label: "Currently at", value: "Glodival" },
+    { label: "Main focus", value: "Backend" },
+    { label: "Core stack", value: "Laravel" },
     { label: "Database", value: "MySQL" },
   ],
 };
@@ -66,7 +66,7 @@ export const skills: SkillCategory[] = [
   {
     title: "Database",
     icon: "🗄️",
-    items: ["MySQL", "MariaDB", "SQL", "Tối ưu truy vấn"],
+    items: ["MySQL", "MariaDB", "SQL", "Query optimization"],
   },
   {
     title: "Server & DevOps",
@@ -82,26 +82,26 @@ export const skills: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "GloDiPay — Nền tảng thanh toán",
+    title: "GloDiPay — Payment Platform",
     description:
-      "Tham gia phát triển nền tảng thanh toán GloDiPay tại Glodival. Phụ trách phần backend: xây dựng và bảo trì API, xử lý nghiệp vụ giao dịch.",
+      "Helped build the GloDiPay payment platform at Glodival. Owned backend work: building and maintaining APIs and handling transaction logic.",
     tags: ["Laravel", "PHP", "MySQL", "Nginx", "Linux"],
     image: "💳",
     links: {},
     featured: true,
   },
   {
-    title: "Hệ thống ERP nội bộ",
+    title: "Internal ERP System",
     description:
-      "Phát triển các module cho hệ thống ERP nội bộ của công ty — quản lý quy trình, dữ liệu vận hành và báo cáo.",
+      "Built modules for the company's internal ERP — managing workflows, operational data and reporting.",
     tags: ["Laravel", "PHP", "MySQL"],
     image: "🏢",
     links: {},
   },
   {
-    title: "Hệ thống CRM",
+    title: "CRM System",
     description:
-      "Xây dựng tính năng cho hệ thống CRM phục vụ quản lý khách hàng và quy trình bán hàng.",
+      "Built features for a CRM that supports customer management and the sales pipeline.",
     tags: ["Laravel", "MySQL", "Vue"],
     image: "📇",
     links: {},
@@ -112,23 +112,23 @@ export const experiences: Experience[] = [
   {
     role: "Backend Developer · Full-stack",
     company: "Glodival",
-    period: "04/2024 — Hiện tại",
-    location: "Hồ Chí Minh",
+    period: "Apr 2024 — Present",
+    location: "Ho Chi Minh City",
     highlights: [
-      "Khi mới vào: phát triển các hệ thống nội bộ ERP, CRM bằng Laravel",
-      "Từ đầu 2025: chuyển sang dự án GloDiPay — nền tảng thanh toán, phụ trách backend",
-      "Làm việc với MySQL/MariaDB, triển khai và vận hành trên Linux + Nginx",
+      "Started out building internal ERP and CRM systems with Laravel",
+      "From early 2025: moved to GloDiPay — a payment platform — owning the backend",
+      "Working with MySQL/MariaDB, deploying and running on Linux + Nginx",
     ],
     tags: ["PHP", "Laravel", "MySQL", "Linux", "Nginx"],
   },
   {
     role: "Frontend Developer",
     company: "Sota Group",
-    period: "Trước 2024",
-    location: "Hồ Chí Minh",
+    period: "Before 2024",
+    location: "Ho Chi Minh City",
     highlights: [
-      "Làm frontend tại công ty outsource trong thời gian đi học",
-      "Xây dựng giao diện web với HTML, CSS và JavaScript (AJAX)",
+      "Did frontend work at an outsourcing company while studying",
+      "Built web interfaces with HTML, CSS and JavaScript (AJAX)",
     ],
     tags: ["HTML", "CSS", "JavaScript", "AJAX"],
   },
@@ -142,9 +142,9 @@ export const socials: SocialLink[] = [
 ];
 
 export const navLinks = [
-  { href: "#about", label: "Giới thiệu" },
-  { href: "#skills", label: "Kỹ năng" },
-  { href: "#projects", label: "Dự án" },
-  { href: "#experience", label: "Kinh nghiệm" },
-  { href: "#contact", label: "Liên hệ" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
 ];

@@ -11,8 +11,8 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionTitle
           eyebrow="02 — Tech stack"
-          title="Công cụ mình dùng hàng ngày"
-          description="Một số công nghệ chính mà mình đã sử dụng trong các dự án production."
+          title="Tools I work with daily"
+          description="The main technologies I've used across production projects."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

@@ -6,7 +6,7 @@ import { profile, socials } from "../data/portfolio";
 import { ArrowUpRightIcon, MailIcon, SocialIcon } from "./Icons";
 import SectionTitle from "./SectionTitle";
 
-// Cấu hình EmailJS — public key để lộ ở frontend là bình thường.
+// EmailJS config — exposing the public key in the frontend is expected.
 const EMAILJS_SERVICE_ID = "service_4whimqn";
 const EMAILJS_TEMPLATE_ID = "template_r5183qs";
 const EMAILJS_PUBLIC_KEY = "m_VqWYdWVPeyE_u9R";
@@ -21,7 +21,7 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
 
-    // Honeypot: nếu ô ẩn bị điền thì coi như bot, bỏ qua.
+    // Honeypot: if the hidden field is filled, treat it as a bot and skip.
     if (new FormData(form).get("botcheck")) return;
 
     setStatus("sending");
@@ -34,7 +34,7 @@ export default function Contact() {
       form.reset();
     } catch {
       setStatus("error");
-      setErrorMsg("Gửi không thành công, vui lòng thử lại sau.");
+      setErrorMsg("Couldn't send your message. Please try again later.");
     }
   }
 
@@ -42,19 +42,19 @@ export default function Contact() {
     <section id="contact" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <SectionTitle
-          eyebrow="05 — Liên hệ"
-          title="Cùng xây dựng điều gì đó tuyệt vời"
-          description="Mình luôn sẵn sàng trao đổi về các ý tưởng, dự án, hoặc cơ hội hợp tác mới."
+          eyebrow="05 — Contact"
+          title="Let's build something great"
+          description="I'm always happy to chat about ideas, projects, or new opportunities to collaborate."
         />
 
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div className="glass rounded-2xl p-6 sm:p-8">
             <h3 className="mb-4 text-xl font-semibold text-foreground">
-              Thông tin liên hệ
+              Contact info
             </h3>
             <p className="mb-6 text-sm text-foreground-muted">
-              Gửi mình một email hoặc kết nối qua mạng xã hội. Mình thường phản
-              hồi trong vòng 24h.
+              Send me an email or connect on social media. I usually reply
+              within 24 hours.
             </p>
 
             <a
@@ -75,7 +75,7 @@ export default function Contact() {
 
             <div className="mt-6">
               <div className="mb-3 text-xs uppercase tracking-wider text-foreground-dim">
-                Hoặc tìm mình ở
+                Or find me on
               </div>
               <div className="flex gap-3">
                 {socials.map((s) => (
@@ -98,7 +98,7 @@ export default function Contact() {
             onSubmit={onSubmit}
             className="glass rounded-2xl p-6 sm:p-8 space-y-4"
           >
-            {/* Honeypot chống spam — người dùng thật không nhìn thấy ô này */}
+            {/* Honeypot spam trap — real users never see this field */}
             <input
               type="checkbox"
               name="botcheck"
@@ -108,33 +108,33 @@ export default function Contact() {
               aria-hidden
             />
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Tên của bạn" name="name" placeholder="Nguyễn Văn A" required />
+              <Field label="Your name" name="name" placeholder="Jane Doe" required />
               <Field
                 label="Email"
                 name="email"
                 type="email"
-                placeholder="ban@example.com"
+                placeholder="you@example.com"
                 required
               />
             </div>
             <Field
-              label="Tiêu đề"
+              label="Subject"
               name="subject"
-              placeholder="Mình có một dự án..."
+              placeholder="I have a project..."
             />
             <div>
               <label
                 htmlFor="message"
                 className="mb-2 block text-sm text-foreground-muted"
               >
-                Nội dung
+                Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
                 required
-                placeholder="Mô tả ngắn về dự án hoặc nội dung bạn muốn trao đổi..."
+                placeholder="A short description of your project or what you'd like to discuss..."
                 className="w-full resize-none rounded-xl border border-border bg-surface/40 px-4 py-3 text-sm text-foreground placeholder:text-foreground-dim focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
               />
             </div>
@@ -144,10 +144,10 @@ export default function Contact() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-cyan px-6 py-3 font-medium text-background shadow-[0_8px_30px_-8px_rgba(56,189,248,0.6)] transition-all hover:shadow-[0_12px_40px_-8px_rgba(56,189,248,0.8)] hover:-translate-y-0.5 disabled:opacity-60"
             >
               {status === "sending"
-                ? "Đang gửi..."
+                ? "Sending..."
                 : status === "sent"
-                  ? "Đã gửi ✓"
-                  : "Gửi tin nhắn"}
+                  ? "Sent ✓"
+                  : "Send message"}
               {(status === "idle" || status === "error") && (
                 <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
               )}
@@ -155,7 +155,7 @@ export default function Contact() {
 
             {status === "sent" && (
               <p className="text-sm text-cyan">
-                Cảm ơn bạn! Tin nhắn đã được gửi, mình sẽ phản hồi sớm.
+                Thanks! Your message has been sent — I'll get back to you soon.
               </p>
             )}
             {status === "error" && (
