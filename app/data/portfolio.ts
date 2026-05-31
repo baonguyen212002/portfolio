@@ -34,7 +34,7 @@ export const profile = {
   tagline:
     "I focus on the backend — designing APIs, optimizing databases and running servers. When a project needs it, I handle the frontend too.",
   location: "Ho Chi Minh City, Vietnam",
-  email: "shino@glodival.com",
+  email: "baonguyen212002@gmail.com",
   available: true,
   bio: [
     "Hi, I'm Shino — a backend developer who also works full-stack. I enjoy building the systems that quietly keep a product running.",
@@ -135,10 +135,13 @@ export const experiences: Experience[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { name: "GitHub", url: "https://github.com", icon: "github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-  { name: "Twitter", url: "https://twitter.com", icon: "twitter" },
-  { name: "Email", url: "mailto:shino@glodival.com", icon: "mail" },
+  { name: "GitHub", url: "https://github.com/baonguyen212002", icon: "github" },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/ch%C3%AD-b%E1%BA%A3o-nguy%E1%BB%85n-570668278/",
+    icon: "linkedin",
+  },
+  { name: "Email", url: "mailto:baonguyen212002@gmail.com", icon: "mail" },
 ];
 
 export const navLinks = [

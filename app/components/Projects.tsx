@@ -86,7 +86,7 @@ export default function Projects() {
 
         <div className="mt-12 text-center">
           <a
-            href="https://github.com"
+            href="https://github.com/baonguyen212002"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-6 py-3 font-medium text-foreground transition-all hover:border-accent/50 hover:bg-surface"
