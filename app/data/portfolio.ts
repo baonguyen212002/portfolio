@@ -30,14 +30,14 @@ export type SocialLink = {
 
 export const profile = {
   name: "Shino",
-  role: "Full-stack Developer (thiên Backend)",
+  role: "Backend Developer · Full-stack",
   tagline:
     "Mình tập trung vào Backend — thiết kế API, tối ưu database và vận hành server. Khi dự án cần, mình cũng làm được phần frontend.",
   location: "Hồ Chí Minh, Việt Nam",
   email: "shino@glodival.com",
   available: true,
   bio: [
-    "Xin chào, mình là Shino — một Full-stack Developer thiên về Backend. Mình thích xây dựng những hệ thống chạy ổn định ở phía sau sản phẩm.",
+    "Xin chào, mình là Shino — một Backend Developer, đồng thời làm được full-stack. Mình thích xây dựng những hệ thống chạy ổn định ở phía sau sản phẩm.",
     "Thế mạnh của mình là backend với PHP & Laravel, làm việc cùng MySQL/MariaDB và triển khai trên môi trường Linux + Nginx. Phía frontend, mình dùng được Vue, Nuxt.js cùng HTML/CSS khi dự án cần.",
     "Hiện mình đang làm tại Glodival (Hồ Chí Minh), tham gia phát triển các hệ thống nội bộ (ERP, CRM) và nền tảng thanh toán GloDiPay.",
   ],
@@ -110,7 +110,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    role: "Full-stack Developer (thiên Backend)",
+    role: "Backend Developer · Full-stack",
     company: "Glodival",
     period: "04/2024 — Hiện tại",
     location: "Hồ Chí Minh",

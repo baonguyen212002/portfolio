@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shino — Backend Developer",
   description:
-    "Portfolio của Shino — Full-stack Developer thiên Backend, chuyên PHP, Laravel, MySQL và triển khai trên Linux/Nginx.",
+    "Portfolio của Shino — Backend Developer (cũng làm full-stack), chuyên PHP, Laravel, MySQL và triển khai trên Linux/Nginx.",
   keywords: [
     "Backend Developer",
     "PHP",
