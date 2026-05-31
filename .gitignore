@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# playwright mcp artifacts (screenshots, snapshots, console logs)
+.playwright-mcp/
+mobile-full.jpeg
+
 # debug
 npm-debug.log*
 yarn-debug.log*

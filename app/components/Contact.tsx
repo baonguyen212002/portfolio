@@ -48,7 +48,7 @@ export default function Contact() {
         />
 
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <div className="glass rounded-2xl p-6 sm:p-8">
+          <div className="glass min-w-0 rounded-2xl p-6 sm:p-8">
             <h3 className="mb-4 text-xl font-semibold text-foreground">
               Contact info
             </h3>
@@ -64,13 +64,13 @@ export default function Contact() {
               <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-accent/20 to-cyan/20 text-accent">
                 <MailIcon className="h-5 w-5" />
               </span>
-              <div className="flex-1">
+              <div className="min-w-0 flex-1">
                 <div className="text-xs text-foreground-dim">Email</div>
-                <div className="font-mono text-sm text-foreground">
+                <div className="break-all font-mono text-sm text-foreground">
                   {profile.email}
                 </div>
               </div>
-              <ArrowUpRightIcon className="h-4 w-4 text-foreground-dim transition-all group-hover:rotate-45 group-hover:text-accent" />
+              <ArrowUpRightIcon className="h-4 w-4 shrink-0 text-foreground-dim transition-all group-hover:rotate-45 group-hover:text-accent" />
             </a>
 
             <div className="mt-6">
@@ -96,7 +96,7 @@ export default function Contact() {
 
           <form
             onSubmit={onSubmit}
-            className="glass rounded-2xl p-6 sm:p-8 space-y-4"
+            className="glass min-w-0 rounded-2xl p-6 sm:p-8 space-y-4"
           >
             {/* Honeypot spam trap — real users never see this field */}
             <input

@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 sm:py-32">
+    <section id="skills" className="relative overflow-hidden py-24 sm:py-32">
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[120px]"
         aria-hidden
