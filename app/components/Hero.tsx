@@ -181,12 +181,12 @@ export default function Hero() {
           {profile.stats.map((s) => (
             <div
               key={s.label}
-              className="glass card-glow rounded-2xl p-5 text-center"
+              className="glass card-glow rounded-2xl p-4 text-center sm:p-5"
             >
-              <div className="text-gradient text-3xl font-bold sm:text-4xl">
+              <div className="text-gradient text-lg font-bold sm:text-3xl lg:text-4xl">
                 {s.value}
               </div>
-              <div className="mt-1 text-xs text-foreground-dim sm:text-sm">
+              <div className="mt-1 text-[11px] text-foreground-dim sm:text-sm">
                 {s.label}
               </div>
             </div>

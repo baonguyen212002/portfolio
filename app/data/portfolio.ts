@@ -39,7 +39,7 @@ export const profile = {
   bio: [
     "Hi, I'm Shino — a backend developer who also works full-stack. I enjoy building the systems that quietly keep a product running.",
     "My strengths are backend work with PHP & Laravel, MySQL/MariaDB, and deploying on Linux + Nginx. On the frontend I'm comfortable with Vue, Nuxt.js and HTML/CSS whenever a project calls for it.",
-    "I'm currently at Glodival (Ho Chi Minh City), building internal systems (ERP, CRM) and the GloDiPay payment platform.",
+    "I'm currently at Glodival (Ho Chi Minh City), building internal systems (ERP, CRM) and the GlodiPay payment platform.",
   ],
   stats: [
     { label: "Currently at", value: "Glodival" },
@@ -82,9 +82,9 @@ export const skills: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "GloDiPay — Payment Platform",
+    title: "GlodiPay — Payment Platform",
     description:
-      "Helped build the GloDiPay payment platform at Glodival. Owned backend work: building and maintaining APIs and handling transaction logic.",
+      "Helped build the GlodiPay payment platform at Glodival. Owned backend work: building and maintaining APIs and handling transaction logic.",
     tags: ["Laravel", "PHP", "MySQL", "Nginx", "Linux"],
     image: "💳",
     links: {},
@@ -116,7 +116,7 @@ export const experiences: Experience[] = [
     location: "Ho Chi Minh City",
     highlights: [
       "Started out building internal ERP and CRM systems with Laravel",
-      "From early 2025: moved to GloDiPay — a payment platform — owning the backend",
+      "From early 2025: moved to GlodiPay — a payment platform — owning the backend",
       "Working with MySQL/MariaDB, deploying and running on Linux + Nginx",
     ],
     tags: ["PHP", "Laravel", "MySQL", "Linux", "Nginx"],
