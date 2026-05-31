@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { profile, socials } from "../data/portfolio";
 import { ArrowUpRightIcon, MailIcon, SocialIcon } from "./Icons";
 import SectionTitle from "./SectionTitle";
 
-// Access key của Web3Forms — public được, không phải secret nhạy cảm.
-const WEB3FORMS_ACCESS_KEY = "363c0ff6-7b5a-470b-a363-9d38dd8768c4";
+// Cấu hình EmailJS — public key để lộ ở frontend là bình thường.
+const EMAILJS_SERVICE_ID = "service_4whimqn";
+const EMAILJS_TEMPLATE_ID = "template_r5183qs";
+const EMAILJS_PUBLIC_KEY = "m_VqWYdWVPeyE_u9R";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -17,33 +20,21 @@ export default function Contact() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const formData = new FormData(form);
 
-    const name = String(formData.get("name") || "");
-    const subject = String(formData.get("subject") || "").trim();
-    formData.set("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.set("subject", subject || `[Portfolio] Liên hệ từ ${name}`);
-    formData.set("from_name", "Portfolio Shino");
+    // Honeypot: nếu ô ẩn bị điền thì coi như bot, bỏ qua.
+    if (new FormData(form).get("botcheck")) return;
 
     setStatus("sending");
     setErrorMsg("");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
+        publicKey: EMAILJS_PUBLIC_KEY,
       });
-      const data = await res.json();
-      if (data.success) {
-        setStatus("sent");
-        form.reset();
-      } else {
-        setStatus("error");
-        setErrorMsg(data.message || "Gửi không thành công, vui lòng thử lại.");
-      }
+      setStatus("sent");
+      form.reset();
     } catch {
       setStatus("error");
-      setErrorMsg("Lỗi kết nối, vui lòng thử lại sau.");
+      setErrorMsg("Gửi không thành công, vui lòng thử lại sau.");
     }
   }
 
