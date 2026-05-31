@@ -1,4 +1,5 @@
 import { profile, socials } from "../data/portfolio";
+import Typewriter from "./Typewriter";
 import {
   ArrowUpRightIcon,
   DownloadIcon,
@@ -37,8 +38,11 @@ export default function Hero() {
               <span className="block text-foreground-muted text-2xl sm:text-3xl mb-3 font-normal">
                 Xin chào, mình là
               </span>
-              <span className="text-gradient">{profile.name}</span>
-              <span className="inline-block w-1 h-12 sm:h-14 lg:h-16 ml-1 bg-accent translate-y-1 animate-blink" />
+              <Typewriter
+                text={profile.name}
+                className="text-gradient"
+                caretClassName="w-1 h-12 sm:h-14 lg:h-16"
+              />
             </h1>
 
             <h2 className="mb-6 font-mono text-lg text-foreground-muted sm:text-xl">
