@@ -42,6 +42,7 @@ export default function Hero() {
                 text={profile.name}
                 className="text-gradient"
                 caretClassName="w-1 h-12 sm:h-14 lg:h-16"
+                loop
               />
             </h1>
 
