@@ -1,0 +1,312 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "S shino.dev" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=e5]: S
+        - generic [ref=e6]: shino.dev
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Giới thiệu" [ref=e9] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e10]:
+          - link "Kỹ năng" [ref=e11] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e12]:
+          - link "Dự án" [ref=e13] [cursor=pointer]:
+            - /url: "#projects"
+        - listitem [ref=e14]:
+          - link "Kinh nghiệm" [ref=e15] [cursor=pointer]:
+            - /url: "#experience"
+        - listitem [ref=e16]:
+          - link "Liên hệ" [ref=e17] [cursor=pointer]:
+            - /url: "#contact"
+      - link "Available" [ref=e18] [cursor=pointer]:
+        - /url: "#contact"
+        - text: Available
+  - main [ref=e22]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: Sẵn sàng nhận dự án mới
+          - heading "Xin chào, mình là Shino" [level=1] [ref=e32]:
+            - generic [ref=e33]: Xin chào, mình là
+            - text: Shino
+          - heading "> Full-stack Developer (thiên Backend)" [level=2] [ref=e35]
+          - paragraph [ref=e36]: Mình tập trung vào Backend — thiết kế API, tối ưu database và vận hành server. Khi dự án cần, mình cũng làm được phần frontend.
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - img [ref=e39]
+              - text: Hồ Chí Minh, Việt Nam
+            - link "shino@glodival.com" [ref=e43] [cursor=pointer]:
+              - /url: mailto:shino@glodival.com
+          - generic [ref=e44]:
+            - link "Xem dự án" [ref=e45] [cursor=pointer]:
+              - /url: "#projects"
+              - text: Xem dự án
+              - img [ref=e46]
+            - link "Liên hệ" [ref=e49] [cursor=pointer]:
+              - /url: "#contact"
+              - img [ref=e50]
+              - text: Liên hệ
+          - generic [ref=e53]:
+            - link "GitHub" [ref=e54] [cursor=pointer]:
+              - /url: https://github.com
+              - img [ref=e55]
+            - link "LinkedIn" [ref=e57] [cursor=pointer]:
+              - /url: https://linkedin.com
+              - img [ref=e58]
+            - link "Twitter" [ref=e60] [cursor=pointer]:
+              - /url: https://twitter.com
+              - img [ref=e61]
+            - link "Email" [ref=e63] [cursor=pointer]:
+              - /url: mailto:shino@glodival.com
+              - img [ref=e64]
+        - generic [ref=e70]:
+          - generic [ref=e76]: ~/shino/profile.ts
+          - generic [ref=e77]: "1 const developer = { 2 name: \"Shino\", 3 role: \"Backend\", 4 stack: [ 5 \"Laravel\", \"PHP\", 6 \"MySQL\", \"Nginx\" 7 ], 8 available: true, 9 }"
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: Glodival
+          - generic [ref=e81]: Hiện làm tại
+        - generic [ref=e82]:
+          - generic [ref=e83]: Backend
+          - generic [ref=e84]: Vị trí chính
+        - generic [ref=e85]:
+          - generic [ref=e86]: Laravel
+          - generic [ref=e87]: Stack chủ lực
+        - generic [ref=e88]:
+          - generic [ref=e89]: MySQL
+          - generic [ref=e90]: Database
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]: 01 — Về mình
+        - heading "Một chút về bản thân" [level=2] [ref=e96]
+        - paragraph [ref=e97]: Sản phẩm tốt cần được xây từ nền tảng kỹ thuật vững và sự đồng cảm với người dùng.
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - paragraph [ref=e100]: Xin chào, mình là Shino — một Full-stack Developer thiên về Backend. Mình thích xây dựng những hệ thống chạy ổn định ở phía sau sản phẩm.
+          - paragraph [ref=e101]: Thế mạnh của mình là backend với PHP & Laravel, làm việc cùng MySQL/MariaDB và triển khai trên môi trường Linux + Nginx. Phía frontend, mình dùng được Vue, Nuxt.js cùng HTML/CSS khi dự án cần.
+          - paragraph [ref=e102]: Hiện mình đang làm tại Glodival (Hồ Chí Minh), tham gia phát triển các hệ thống nội bộ (ERP, CRM) và nền tảng thanh toán GloDiPay.
+          - link "Hợp tác cùng mình →" [ref=e104] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: 🚀
+            - heading "Performance đầu tiên" [level=3] [ref=e108]
+            - paragraph [ref=e109]: Tối ưu LCP, INP và Core Web Vitals từ ngay những dòng code đầu tiên.
+          - generic [ref=e110]:
+            - generic [ref=e111]: 🧩
+            - heading "Kiến trúc rõ ràng" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Module hóa, tách concerns, dễ bảo trì và mở rộng cho team lớn.
+          - generic [ref=e114]:
+            - generic [ref=e115]: 🎯
+            - heading "Định hướng business" [level=3] [ref=e116]
+            - paragraph [ref=e117]: Code phục vụ mục tiêu kinh doanh, không phải để phô trương kỹ thuật.
+          - generic [ref=e118]:
+            - generic [ref=e119]: 📚
+            - heading "Học liên tục" [level=3] [ref=e120]
+            - paragraph [ref=e121]: Luôn cập nhật công nghệ mới và đánh giá khi nào nên áp dụng.
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]: 02 — Tech stack
+        - heading "Công cụ mình dùng hàng ngày" [level=2] [ref=e127]
+        - paragraph [ref=e128]: Một số công nghệ chính mà mình đã sử dụng trong các dự án production.
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: ⚙️
+            - heading "Backend" [level=3] [ref=e133]
+          - list [ref=e134]:
+            - listitem [ref=e135]: PHP
+            - listitem [ref=e136]: Laravel
+            - listitem [ref=e137]: REST API
+            - listitem [ref=e138]: Eloquent ORM
+            - listitem [ref=e139]: OOP / MVC
+            - listitem [ref=e140]: Composer
+            - listitem [ref=e141]: Artisan
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e144]: 🗄️
+            - heading "Database" [level=3] [ref=e145]
+          - list [ref=e146]:
+            - listitem [ref=e147]: MySQL
+            - listitem [ref=e148]: MariaDB
+            - listitem [ref=e149]: SQL
+            - listitem [ref=e150]: Tối ưu truy vấn
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: 🐧
+            - heading "Server & DevOps" [level=3] [ref=e154]
+          - list [ref=e155]:
+            - listitem [ref=e156]: Linux
+            - listitem [ref=e157]: Nginx
+            - listitem [ref=e158]: Git
+            - listitem [ref=e159]: Shell
+            - listitem [ref=e160]: Deploy
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: 🎨
+            - heading "Frontend" [level=3] [ref=e164]
+          - list [ref=e165]:
+            - listitem [ref=e166]: Vue
+            - listitem [ref=e167]: Nuxt.js
+            - listitem [ref=e168]: JavaScript
+            - listitem [ref=e169]: AJAX
+            - listitem [ref=e170]: HTML
+            - listitem [ref=e171]: CSS
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - generic [ref=e175]: 03 — Dự án
+        - heading "Những sản phẩm mình đã xây dựng" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Chọn lọc một vài dự án tiêu biểu — từ các sản phẩm thương mại đến dự án thử nghiệm.
+      - generic [ref=e179]:
+        - article [ref=e180]:
+          - generic [ref=e181]:
+            - generic [ref=e184]: 💳
+            - generic [ref=e185]: Featured
+          - generic [ref=e186]:
+            - heading "GloDiPay — Nền tảng thanh toán" [level=3] [ref=e188]
+            - paragraph [ref=e189]: "Tham gia phát triển nền tảng thanh toán GloDiPay tại Glodival. Phụ trách phần backend: xây dựng và bảo trì API, xử lý nghiệp vụ giao dịch."
+            - list [ref=e190]:
+              - listitem [ref=e191]: Laravel
+              - listitem [ref=e192]: PHP
+              - listitem [ref=e193]: MySQL
+              - listitem [ref=e194]: Nginx
+              - listitem [ref=e195]: Linux
+        - article [ref=e196]:
+          - generic [ref=e200]: 🏢
+          - generic [ref=e201]:
+            - heading "Hệ thống ERP nội bộ" [level=3] [ref=e203]
+            - paragraph [ref=e204]: Phát triển các module cho hệ thống ERP nội bộ của công ty — quản lý quy trình, dữ liệu vận hành và báo cáo.
+            - list [ref=e205]:
+              - listitem [ref=e206]: Laravel
+              - listitem [ref=e207]: PHP
+              - listitem [ref=e208]: MySQL
+        - article [ref=e209]:
+          - generic [ref=e213]: 📇
+          - generic [ref=e214]:
+            - heading "Hệ thống CRM" [level=3] [ref=e216]
+            - paragraph [ref=e217]: Xây dựng tính năng cho hệ thống CRM phục vụ quản lý khách hàng và quy trình bán hàng.
+            - list [ref=e218]:
+              - listitem [ref=e219]: Laravel
+              - listitem [ref=e220]: MySQL
+              - listitem [ref=e221]: Vue
+      - link "Xem thêm trên GitHub" [ref=e223] [cursor=pointer]:
+        - /url: https://github.com
+        - text: Xem thêm trên GitHub
+        - img [ref=e224]
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - generic [ref=e230]: 04 — Hành trình
+        - heading "Kinh nghiệm làm việc" [level=2] [ref=e232]
+        - paragraph [ref=e233]: Những vị trí đã đi qua và những bài học rút ra từ thực chiến.
+      - list [ref=e236]:
+        - listitem [ref=e237]:
+          - generic [ref=e240]:
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - heading "Full-stack Developer (thiên Backend)" [level=3] [ref=e243]
+                - generic [ref=e244]:
+                  - text: "@ Glodival"
+                  - generic [ref=e245]: · Hồ Chí Minh
+              - generic [ref=e246]: 04/2024 — Hiện tại
+            - list [ref=e247]:
+              - listitem [ref=e248]: "Khi mới vào: phát triển các hệ thống nội bộ ERP, CRM bằng Laravel"
+              - listitem [ref=e250]: "Từ đầu 2025: chuyển sang dự án GloDiPay — nền tảng thanh toán, phụ trách backend"
+              - listitem [ref=e252]: Làm việc với MySQL/MariaDB, triển khai và vận hành trên Linux + Nginx
+            - list [ref=e254]:
+              - listitem [ref=e255]: PHP
+              - listitem [ref=e256]: Laravel
+              - listitem [ref=e257]: MySQL
+              - listitem [ref=e258]: Linux
+              - listitem [ref=e259]: Nginx
+        - listitem [ref=e260]:
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - heading "Frontend Developer" [level=3] [ref=e266]
+                - generic [ref=e267]:
+                  - text: "@ Sota Group"
+                  - generic [ref=e268]: · Hồ Chí Minh
+              - generic [ref=e269]: Trước 2024
+            - list [ref=e270]:
+              - listitem [ref=e271]: Làm frontend tại công ty outsource trong thời gian đi học
+              - listitem [ref=e273]: Xây dựng giao diện web với HTML, CSS và JavaScript (AJAX)
+            - list [ref=e275]:
+              - listitem [ref=e276]: HTML
+              - listitem [ref=e277]: CSS
+              - listitem [ref=e278]: JavaScript
+              - listitem [ref=e279]: AJAX
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]: 05 — Liên hệ
+        - heading "Cùng xây dựng điều gì đó tuyệt vời" [level=2] [ref=e285]
+        - paragraph [ref=e286]: Mình luôn sẵn sàng trao đổi về các ý tưởng, dự án, hoặc cơ hội hợp tác mới.
+      - generic [ref=e287]:
+        - generic [ref=e288]:
+          - heading "Thông tin liên hệ" [level=3] [ref=e289]
+          - paragraph [ref=e290]: Gửi mình một email hoặc kết nối qua mạng xã hội. Mình thường phản hồi trong vòng 24h.
+          - link "Email shino@glodival.com" [ref=e291] [cursor=pointer]:
+            - /url: mailto:shino@glodival.com
+            - img [ref=e293]
+            - generic [ref=e296]:
+              - generic [ref=e297]: Email
+              - generic [ref=e298]: shino@glodival.com
+            - img [ref=e299]
+          - generic [ref=e302]:
+            - generic [ref=e303]: Hoặc tìm mình ở
+            - generic [ref=e304]:
+              - link "GitHub" [ref=e305] [cursor=pointer]:
+                - /url: https://github.com
+                - img [ref=e306]
+              - link "LinkedIn" [ref=e308] [cursor=pointer]:
+                - /url: https://linkedin.com
+                - img [ref=e309]
+              - link "Twitter" [ref=e311] [cursor=pointer]:
+                - /url: https://twitter.com
+                - img [ref=e312]
+              - link "Email" [ref=e314] [cursor=pointer]:
+                - /url: mailto:shino@glodival.com
+                - img [ref=e315]
+        - generic [ref=e318]:
+          - generic [ref=e319]:
+            - generic [ref=e320]:
+              - generic [ref=e321]: Tên của bạn
+              - textbox "Tên của bạn" [ref=e322]:
+                - /placeholder: Nguyễn Văn A
+            - generic [ref=e323]:
+              - generic [ref=e324]: Email
+              - textbox "Email" [ref=e325]:
+                - /placeholder: ban@example.com
+          - generic [ref=e326]:
+            - generic [ref=e327]: Tiêu đề
+            - textbox "Tiêu đề" [ref=e328]:
+              - /placeholder: Mình có một dự án...
+          - generic [ref=e329]:
+            - generic [ref=e330]: Nội dung
+            - textbox "Nội dung" [ref=e331]:
+              - /placeholder: Mô tả ngắn về dự án hoặc nội dung bạn muốn trao đổi...
+          - button "Gửi tin nhắn" [ref=e332]:
+            - text: Gửi tin nhắn
+            - img [ref=e333]
+  - contentinfo [ref=e336]:
+    - generic [ref=e337]:
+      - generic [ref=e338]:
+        - generic [ref=e339]: S
+        - generic [ref=e340]: © 2026 Shino. Crafted with Next.js & Tailwind.
+      - generic [ref=e341]:
+        - link "GitHub" [ref=e342] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e343]
+        - link "LinkedIn" [ref=e345] [cursor=pointer]:
+          - /url: https://linkedin.com
+          - img [ref=e346]
+        - link "Twitter" [ref=e348] [cursor=pointer]:
+          - /url: https://twitter.com
+          - img [ref=e349]
+        - link "Email" [ref=e351] [cursor=pointer]:
+          - /url: mailto:shino@glodival.com
+          - img [ref=e352]
+  - button "Open Next.js Dev Tools" [ref=e360] [cursor=pointer]:
+    - img [ref=e361]
